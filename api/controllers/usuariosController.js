@@ -4,7 +4,7 @@ const TYPES = require('tedious').TYPES;
 const connection = require('../../database/connection').db;
 
 const funciones = {
-    getUsers(){
+    syncUsuarios(){
         let index = 0;
         let ObjArray = [];
         //let count = 0;
@@ -40,6 +40,11 @@ const funciones = {
         //     console.log(rows)
         // })
         connection.execSql(request);
+    },
+    validateEmail(email) 
+    {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
     }
 }
 

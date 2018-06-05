@@ -1,4 +1,5 @@
 const dbInit = require('../database/connection');
+const mongoConnect = require('../database/mongoConnection');
 const bodyParser = require('body-parser');
 const express = require('express');
 const routes = require('../api/routes/routes');
@@ -20,6 +21,7 @@ const boot = function(app){
       }
     });
     //dbInit.init();
+    mongoConnect();
     routes(app);
 }
 

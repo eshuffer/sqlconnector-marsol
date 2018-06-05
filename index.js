@@ -3,6 +3,7 @@ var bootstrap = require('./bootstrap/initApp');
 
 //const test = require('./api/controllers/usuariosController');
 const test2 = require('./api/controllers/equiposController');
+const test3 = require('./api/controllers/contratosController');
 const app = express();
 bootstrap(app);
 
@@ -13,5 +14,11 @@ const server = app.listen(app.get('port'), ()=>{
 });
 
 setTimeout(()=>{
-    test2.getEquipos();
+    test2.syncEquipos();
+    //test3.syncContracs();
 },5000);
+
+// setTimeout(()=>{
+//     test2.getEquipos();
+//     //test3.getContracts();
+// },6000);
