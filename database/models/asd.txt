@@ -1,0 +1,10 @@
+CstmrName
+CORP. NAC. DEL COBRE
+CstmrCode
+94623000-6
+
+CntrcTmplt
+Garantia
+
+CstmrCode
+61606900-4

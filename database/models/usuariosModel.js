@@ -1,13 +1,12 @@
 var mongoose = require('mongoose')
 
 const usuarioSchema = new mongoose.Schema({
-    email : {type : String, required : true},
+    email : {type : String},
     password : {type : String, default : 'N/A'},
-    permisos : {service : Array, connect : Array, chef : Array, pago : Array},
+    permisos : {service : Array, connect : Array, chef : Array, pago : Array, beneficios : Array, bolsaTrabajo : Array},
     nombres : String,
     rut : {type : String, default : '-'},
     telefono : String,
-    bussinessPartner : String,
     cargo : {type : String, default : '-'},
     wpTags : Array,
     wpTagsId : Array,
